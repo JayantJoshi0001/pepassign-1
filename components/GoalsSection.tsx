@@ -26,38 +26,38 @@ export default function GoalsSection() {
   ];
 
   return (
-    <section className="goals-section">
-      <div className="goals-bg-layer">
-        <Image
-          src="/goals bg.png"
-          alt="Background Pattern"
-          fill
-          className="object-cover goals-bg-image"
-        />
-      </div>
-
+    <section className="goals-section" aria-labelledby="goals-heading">
       <div className="goals-inner">
-        <div className="goals-grid">
-          <div className="goals-heading">
-            <h2 className="goals-title">
-              Our 2028 <span>Goals</span>
-            </h2>
-          </div>
+        <article className="goals-card">
+          <div className="goals-card-content">
+            <header className="goals-heading">
+              <h2 id="goals-heading" className="goals-title">
+                Our 2028 <span>Goals</span>
+              </h2>
+            </header>
 
-          <div className="goals-stats">
             <div className="goals-list">
               {goals.map((goal, index) => (
-                <div key={index} className="goal-item">
-                  <div className="goal-icon-row">{goal.icon}</div>
+                <article key={index} className="goal-item">
+                  <div> {goal.icon} </div>
                   <div className="goal-copy">
-                    <div className="goal-number">{goal.number}</div>
-                    <div className="goal-label">{goal.label}</div>
+                    <p className="goal-number">{goal.number}</p>
+                    <p className="goal-label">{goal.label}</p>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
-        </div>
+
+          <div className="goals-card-image">
+            <Image
+              src="/goals bg.png"
+              alt="Goals background pattern"
+              fill
+              className="goals-panel-graphic"
+            />
+          </div>
+        </article>
       </div>
     </section>
   );
