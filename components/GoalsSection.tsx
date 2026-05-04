@@ -4,63 +4,54 @@ import { Sprout, User, Globe, FileText } from "lucide-react";
 export default function GoalsSection() {
   const goals = [
     {
-      icon: <Sprout className="w-5 h-5 text-[#333333]" />,
+      icon: <Sprout className="goal-icon" />,
       number: "1 Million",
       label: "Trees Planted",
     },
     {
-      icon: <User className="w-5 h-5 text-[#333333]" />,
+      icon: <User className="goal-icon" />,
       number: "100,000",
       label: "Inclusive SMEs Onboarded",
     },
     {
-      icon: <Globe className="w-5 h-5 text-[#333333]" />,
+      icon: <Globe className="goal-icon" />,
       number: "10,000",
       label: "Global Buyers Aligned with ESG-Ready SMEs",
     },
     {
-      icon: <FileText className="w-5 h-5 text-[#333333]" />,
+      icon: <FileText className="goal-icon" />,
       number: "500+",
       label: "Impact Case Studies Showcased",
     },
   ];
 
   return (
-    <section className="relative py-32 bg-white overflow-hidden">
-      {/* Background Image Layer */}
-      <div className="absolute inset-0 z-0">
+    <section className="goals-section">
+      <div className="goals-bg-layer">
         <Image
           src="/goals bg.png"
           alt="Background Pattern"
           fill
-          className="object-cover opacity-80"
+          className="object-cover goals-bg-image"
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
-          {/* Heading */}
-          <div className="lg:col-span-5 mb-16 lg:mb-0">
-            <h2 className="text-[48px] font-medium text-[#333333] tracking-tight">
-              Our 2028 <span className="text-[#ef4444]">Goals</span>
+      <div className="goals-inner">
+        <div className="goals-grid">
+          <div className="goals-heading">
+            <h2 className="goals-title">
+              Our 2028 <span>Goals</span>
             </h2>
           </div>
 
-          {/* Stats Grid */}
-          <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
+          <div className="goals-stats">
+            <div className="goals-list">
               {goals.map((goal, index) => (
-                <div key={index} className="flex flex-col space-y-4">
-                  <div className="flex items-center">
-                    {goal.icon}
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-[42px] font-bold text-[#ef4444] leading-none tracking-tight">
-                      {goal.number}
-                    </div>
-                    <div className="text-[14px] text-[#777777] font-medium leading-relaxed max-w-[200px]">
-                      {goal.label}
-                    </div>
+                <div key={index} className="goal-item">
+                  <div className="goal-icon-row">{goal.icon}</div>
+                  <div className="goal-copy">
+                    <div className="goal-number">{goal.number}</div>
+                    <div className="goal-label">{goal.label}</div>
                   </div>
                 </div>
               ))}

@@ -29,44 +29,33 @@ export default function ESGSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl sm:text-5xl text-[#333333] tracking-tight">
-          ESG & Environmental Impact
-        </h2>
-        <p className="mt-2 text-[15px] text-[#777777] max-w-2xl mx-auto leading-relaxed">
+    <section className="esg-section">
+      <div className="esg-inner">
+        <h2 className="esg-title">ESG & Environmental Impact</h2>
+        <p className="esg-copy">
           We are committed to helping businesses become globally credible and environmentally responsible.
         </p>
 
-        <div className="mt-8">
-          <h3 className="text-2xl text-[#333333] mb-4">Key ESG Initiatives</h3>
-          <p className="text-[14px] text-[#777777] max-w-4xl mx-auto mb-4 leading-relaxed">
+        <div className="esg-highlights">
+          <h3 className="esg-subtitle">Key ESG Initiatives</h3>
+          <p className="esg-subcopy">
             These badges show that a business is who they say they are, with their identity and data secured by world-class technology.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="esg-card-grid">
             {initiatives.map((item) => (
-              <div
-                key={item.id}
-                className="bg-white border border-[#eeeeee] rounded-2xl px-8 py-10 flex flex-col min-h-[450px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              >
-                <h4 className="text-[20px] font-semibold text-[#333333] mb-6 leading-tight">
-                  {item.title}
-                </h4>
-
-                <div className="flex-grow flex items-center justify-center mb-6">
+              <div key={item.id} className="esg-card">
+                <h4 className="esg-card-title">{item.title}</h4>
+                <div className="esg-card-image">
                   <Image
                     src={item.image}
                     alt={item.title}
                     width={180}
                     height={180}
-                    className="object-contain max-h-[160px]"
+                    className="object-contain"
                   />
                 </div>
-
-                <p className="text-[13px] text-[#888888] leading-relaxed mt-auto">
-                  {item.description}
-                </p>
+                <p className="esg-card-description">{item.description}</p>
               </div>
             ))}
           </div>
