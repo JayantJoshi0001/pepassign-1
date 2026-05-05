@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Home, Menu, X } from "lucide-react";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +17,10 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="site-header">
-      <nav className="main-nav">
-        <div className="container navbar-inner">
-          <div className="navbar-logo">
+    <header className={styles.siteHeader}>
+      <nav className={styles.mainNav}>
+        <div className={`container ${styles.navbarInner}`}>
+          <div className={styles.navbarLogo}>
             <Link href="/">
               <Image
                 src="/logo/logo-header.png"
@@ -32,25 +33,27 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="navbar-links">
+          <ul className={styles.navbarLinks}>
             {navLinks.map((link) => (
-              <div key={link.name} className="nav-link-item">
+              <li key={link.name} className={styles.navLinkItem}>
                 <Link
                   href={link.href}
-                  className={`navbar-link ${link.active ? "active" : ""}`}
+                  className={`${styles.navbarLink} ${link.active ? styles.activeLink : ""}`}
                 >
                   {link.name}
                 </Link>
-                {link.active && <div className="link-underline" />}
-              </div>
+                {link.active && <div className={styles.linkUnderline} />}
+              </li>
             ))}
-          </div>
+          </ul>
 
-          <div className="mobile-menu-button">
+          <div className={styles.mobileMenuButton}>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="mobile-toggle"
+              className={styles.mobileToggle}
               type="button"
+              aria-expanded={isOpen}
+              aria-label="Toggle navigation menu"
             >
               {isOpen ? <X className="icon-medium" /> : <Menu className="icon-medium" />}
             </button>
@@ -58,13 +61,13 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="mobile-menu open">
-            <div className="mobile-menu-list">
+          <div className={`${styles.mobileMenu} ${styles.open}`}>
+            <div className={styles.mobileMenuList}>
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="mobile-menu-link"
+                  className={styles.mobileMenuLink}
                 >
                   {link.name}
                 </Link>
@@ -74,15 +77,15 @@ export default function Navbar() {
         )}
       </nav>
 
-      <div className="breadcrumb-bar">
-        <div className="container breadcrumb-inner">
-          <Home className="icon-small" />
-          <span className="breadcrumb-separator">/</span>
-          <Link href="#" className="breadcrumb-link">
+      <div className={styles.breadcrumbBar}>
+        <div className={`container ${styles.breadcrumbInner}`}>
+          <Home className={styles.iconSmall} />
+          <span className={styles.breadcrumbSeparator}>/</span>
+          <Link href="#" className={styles.breadcrumbLink}>
             Company
           </Link>
-          <span className="breadcrumb-separator">/</span>
-          <span className="breadcrumb-label">Partnership Program</span>
+          <span className={styles.breadcrumbSeparator}>/</span>
+          <span className={styles.breadcrumbLabel}>Partnership Program</span>
         </div>
       </div>
     </header>
