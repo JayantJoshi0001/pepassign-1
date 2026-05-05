@@ -1,0 +1,127 @@
+.section {
+  padding: 139px 0px 164px 0px;
+  background: #F7F7F7;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.headingGroup {
+  text-align: center;
+  margin-bottom: 3rem;
+  gap: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 60px;
+  color: #232323;
+  line-height: 68px;
+  letter-spacing: -2%;
+  font-weight: 500;
+  margin: 0;
+}
+
+.copy {
+  color: #555E68;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 720px;
+  margin:auto;
+}
+
+.highlightWrapper {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.highlightHeader {
+  text-align: center;
+  font-size: 34px;
+  line-height: 50px;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.subTitle {
+  font-size: 20px;
+  line-height: 30px;
+  color: #111827;
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+.subCopy {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.cardGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #ebf1ff;
+  border-radius: 24px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.cardIcon {
+  min-height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardIcon :global(img) {
+  max-height: 140px;
+  width: auto;
+}
+
+.cardDescription {
+  margin-top: auto;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  font-weight: 400;
+}

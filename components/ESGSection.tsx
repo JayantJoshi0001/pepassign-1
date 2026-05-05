@@ -1,11 +1,12 @@
 import Image from "next/image";
+import styles from "./ESGSection.module.css";
 
 export default function ESGSection() {
   const initiatives = [
     {
       id: 1,
       title: "One Client, One Tree (with Evertreen)",
-      description: "We are not just another marketplace — we are a full-stack SME growth platform",
+      description: "We are not just another marketplace — we are a full-stack SME growth platform.",
       image: "/Initiative/Intiative 1.png",
     },
     {
@@ -29,24 +30,28 @@ export default function ESGSection() {
   ];
 
   return (
-    <section className="esg-section">
-      <div className="esg-inner">
-        <h2 className="esg-title">ESG & Environmental Impact</h2>
-        <p className="esg-copy">
-          We are committed to helping businesses become globally credible and environmentally responsible.
-        </p>
-
-        <div className="esg-highlights">
-          <h3 className="esg-subtitle">Key ESG Initiatives</h3>
-          <p className="esg-subcopy">
-            These badges show that a business is who they say they are, with their identity and data secured by world-class technology.
+    <section className={styles.section}>
+      <div className={`container ${styles.inner}`}>
+        <div className={styles.headingGroup}>
+          <h2 className={styles.title}>ESG & Environmental Impact</h2>
+          <p className={styles.copy}>
+            We are committed to helping businesses become globally credible and environmentally responsible.
           </p>
+        </div>
 
-          <div className="esg-card-grid">
+        <div className={styles.highlightWrapper}>
+          <div className={styles.highlightHeader}>
+            <h3 className={styles.subTitle}>Key ESG Initiatives</h3>
+            <p className={styles.subCopy}>
+              These badges show that a business is who they say they are, with their identity and data secured by world-class technology.
+            </p>
+          </div>
+
+          <div className={styles.cardGrid}>
             {initiatives.map((item) => (
-              <div key={item.id} className="esg-card">
-                <h4 className="esg-card-title">{item.title}</h4>
-                <div className="esg-card-image">
+              <div key={item.id} className={styles.card}>
+                <h4 className={styles.cardTitle}>{item.title}</h4>
+                <div className={styles.cardIcon}>
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -55,7 +60,7 @@ export default function ESGSection() {
                     className="object-contain"
                   />
                 </div>
-                <p className="esg-card-description">{item.description}</p>
+                <p className={styles.cardDescription}>{item.description}</p>
               </div>
             ))}
           </div>
