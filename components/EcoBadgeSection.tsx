@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./EcoBadgeSection.module.css";
 
 export default function EcoBadgeSection() {
   const badges = [
@@ -25,41 +26,38 @@ export default function EcoBadgeSection() {
   ];
 
   return (
-    <section className="eco-badge-section">
-      <div className="eco-badge-inner">
-        <h2 className="eco-badge-title">
-          Recognizing Businesses That <span>Make a Difference</span>
-        </h2>
-        <p className="eco-badge-copy">
-          At Pepagora, we recognize and promote businesses that are not just profit-driven, but also purpose-driven.
-        </p>
-
-        <div className="eco-badge-cta">
-          <h3 className="eco-badge-cta-title">Eco Badge Tiers</h3>
-          <p className="eco-badge-cta-copy">
-            Our sustainability commitment is not one-size-fits-all. We offer multiple Eco Tags based on a business&apos;s contribution:
+    <section className={styles.section}>
+      <div className={styles.inner}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>
+            Recognizing Businesses That <span>Make a Difference</span>
+          </h2>
+          <p className={styles.intro}>
+            At Pepagora, we recognize and promote businesses that are not just profit-driven, but also purpose-driven.
           </p>
-
-          <div className="eco-badge-grid">
-            {badges.map((badge) => (
-              <div key={badge.name} className="eco-badge-card">
-                <div className="eco-badge-figure">
-                  <Image
-                    src={badge.image}
-                    alt={badge.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="eco-badge-title-small">{badge.name}</h4>
-                <p className="eco-badge-description">{badge.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
-        <p className="eco-badge-note">
-          <span className="eco-badge-note-strong">Note:</span> All eco badges are shown on your public profile and products, and filterable by buyers.
+        <div className={styles.badgeInfo}>
+          <h3 className={styles.badgeInfoTitle}>Eco Badge Tiers</h3>
+          <p className={styles.badgeInfoCopy}>
+            Our sustainability commitment is not one-size-fits-all. We offer multiple Eco Tags based on a business&apos;s contribution:
+          </p>
+        </div>
+
+        <div className={styles.grid}>
+          {badges.map((badge) => (
+            <article key={badge.name} className={styles.card}>
+              <div className={styles.figure}>
+                <Image src={badge.image} alt={badge.name} fill />
+              </div>
+              <h4 className={styles.cardTitle}>{badge.name}</h4>
+              <p className={styles.cardDescription}>{badge.description}</p>
+            </article>
+          ))}
+        </div>
+
+        <p className={styles.note}>
+          <strong>Note:</strong> All eco badges are shown on your public profile and products, and filterable by buyers.
         </p>
       </div>
     </section>
