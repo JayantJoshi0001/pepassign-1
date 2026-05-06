@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Sprout, User, Globe, FileText } from "lucide-react";
+import styles from "./GoalsSection.module.css";
 
 export default function GoalsSection() {
   const goals = [
@@ -26,35 +27,35 @@ export default function GoalsSection() {
   ];
 
   return (
-    <section className="goals-section" aria-labelledby="goals-heading">
-      <div className="goals-inner">
-        <article className="goals-card">
-          <div className="goals-card-content">
-            <header className="goals-heading">
-              <h2 id="goals-heading" className="goals-title">
+    <section className={styles.section} aria-labelledby="goals-heading">
+      <div className={styles.inner}>
+        <article className={styles.card}>
+          <div className={styles.cardContent}>
+            <header className={styles.heading}>
+              <h2 id="goals-heading" className={styles.title}>
                 Our 2028 <span>Goals</span>
               </h2>
             </header>
 
-            <div className="goals-list">
+            <div className={styles.list}>
               {goals.map((goal, index) => (
-                <article key={index} className="goal-item">
-                  <div> {goal.icon} </div>
-                  <div className="goal-copy">
-                    <p className="goal-number">{goal.number}</p>
-                    <p className="goal-label">{goal.label}</p>
+                <article key={index} className={styles.item}>
+                  <div className={styles.icon}>{goal.icon}</div>
+                  <div className={styles.goalCopy}>
+                    <p className={styles.number}>{goal.number}</p>
+                    <p className={styles.label}>{goal.label}</p>
                   </div>
                 </article>
               ))}
             </div>
           </div>
 
-          <div className="goals-card-image">
+          <div className={styles.cardImage}>
             <Image
               src="/goals bg.png"
               alt="Goals background pattern"
               fill
-              className="goals-panel-graphic"
+              className={styles.panelGraphic}
             />
           </div>
         </article>

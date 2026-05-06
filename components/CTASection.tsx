@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { X } from "lucide-react";
+import styles from "./CTASection.module.css";
 
 interface FormData {
   name: string;
@@ -110,25 +110,25 @@ export default function CTASection() {
 
   return (
     <>
-      <section className="cta-section">
-        <div className="cta-inner">
-          <h2 className="cta-title">Be Part of the Movement</h2>
-          <p className="cta-text">
+      <section className={styles.ctaSection}>
+        <div className={styles.ctaInner}>
+          <h2 className={styles.ctaTitle}>Be Part of the Movement</h2>
+          <p className={styles.ctaText}>
             Pepagora is redefining how business can be a force for good. Whether
             you are a buyer, seller, policymaker, or investor—join us in shaping
             global trade that is inclusive, ethical, and future-ready.
           </p>
-          <div className="cta-button-group">
+          <div className={styles.ctaButtonGroup}>
             <button
               onClick={() => setShowBadgeModal(true)}
-              className="cta-button primary"
+              className={`${styles.ctaButton} ${styles.primary}`}
             >
               Apply for Social Impact Badges
             </button>
             <button
               onClick={fetchESGScore}
               disabled={loading}
-              className="cta-button secondary"
+              className={`${styles.ctaButton} ${styles.secondary}`}
             >
               View Your ESG Score or Upgrade
             </button>

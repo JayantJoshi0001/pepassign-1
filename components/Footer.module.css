@@ -1,0 +1,394 @@
+.siteFooter {
+  background: #ffffff;
+  border-top: 1px solid #f3f4f6;
+  padding: 4rem 0 2rem;
+}
+
+.footerInner {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footerTopGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(260px, 360px) 1fr;
+  align-items: start;
+}
+
+@media (max-width: 1023px) {
+  .footerTopGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerBrandPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footerLogo {
+  max-width: 190px;
+  height: auto;
+}
+
+.footerLogoLink {
+  display: inline-flex;
+}
+
+.footerPromoStack {
+  display: grid;
+  gap: 1rem;
+}
+
+.footerPromoCard {
+  border-radius: 2rem;
+  padding: 1.75rem 1.5rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
+}
+
+.footerPromoCardPrimary {
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  position: relative;
+  overflow: hidden;
+}
+
+.footerPromoImageWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.footerPromoImage {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.footerPromoCardSecondary {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.footerPromoLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #6b7280;
+  margin: 0;
+}
+
+.footerPromoTitle {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.footerPromoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 9999px;
+  padding: 0 1.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.footerPromoButtonRed {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.footerPromoButtonRed:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.footerPromoButtonDark {
+  background: #111827;
+  color: #ffffff;
+}
+
+.footerPromoButtonDark:hover {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+.footerLinksGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+@media (max-width: 1023px) {
+  .footerLinksGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .footerLinksGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerLinksSection {
+  min-width: 0;
+}
+
+.footerLinksTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.footerLinkList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footerLink {
+  color: #6b7280;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: #111827;
+}
+
+.footerRule {
+  margin: 2.5rem 0;
+  border: none;
+  border-top: 1px solid #f3f4f6;
+}
+
+.footerBottomGrid {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 420px);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .footerBottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerLeftGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.footerSocialLinks {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footerSocialLink {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  background: #f3f4f6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+}
+
+.footerLanguageSection {
+  display: flex;
+  gap: 0.75rem;
+  color: #6b7280;
+  font-size: 0.8125rem;
+  flex-wrap: wrap;
+}
+
+.footerGlobalLabel {
+  font-weight: 700;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.footerLanguageList {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footerLanguageItem {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  text-align: left;
+  padding: 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footerLanguageItemActive,
+.footerLanguageItem:hover {
+  color: #111827;
+}
+
+.footerNewsletterPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+  gap: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .footerNewsletterPanel {
+    align-items: stretch;
+    text-align: left;
+  }
+}
+
+.footerNewsletterLabel {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.footerNewsletterForm {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.footerNewsletterInput {
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #111827;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footerNewsletterInput:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.footerNewsletterButton {
+  background: #e5e7eb;
+  color: #111827;
+  border: none;
+  border-radius: 9999px;
+  padding: 0 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  min-width: 120px;
+}
+
+.footerNewsletterButton:hover:not(:disabled) {
+  background: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.footerNewsletterButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.footerCopy {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.footerRegionDropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  padding: 0.75rem 1rem;
+  color: #111827;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.footerRegionDropdown:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.footerRegionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.footerRegionLabel {
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.footerRegionValue {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.footerRegionArrow {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.footerCopy small {
+  color: #9ca3af;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .footerCopy {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,104 @@
+.founderSection {
+  padding: 48px 0 96px 0;
+  background: #f7f7f7;
+}
+
+.founderInner {
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.founderCard {
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+}
+
+.founderPhoto {
+  width: 150px;
+  height: 150px;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin: 0 auto 2.5rem;
+}
+
+.founderPhotoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founderQuote {
+  font-size: 24px;
+  font-weight: 400;
+  color: #111827;
+  line-height: 36px;
+}
+
+@media (min-width: 640px) {
+  .founderQuote {
+    font-size: 1.25rem;
+  }
+}
+
+.founderProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.founderName {
+  font-size: 28px;
+  letter-spacing: -5%;
+  font-weight: 450;
+  color: #111827;
+  margin: 0 0  0;
+}
+
+.founderRole {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0;
+}
+
+.founderDivider {
+  height: 1px;
+  background: #9c9c9c;
+  margin: 3rem 0;
+}
+
+.disclaimerSection {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.disclaimerTitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.disclaimerText {
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  color: #6E6E6E;
+  margin: 0;
+}
+
+.disclaimerLink {
+  color: #ef4444;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.disclaimerLink:hover {
+  color: #dc2626;
+}
