@@ -4,9 +4,8 @@
 }
 
 .inner {
-  max-width: 1280px;
+  max-width: 1520px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .headingGroup {
@@ -66,7 +65,7 @@
 
 .cardGrid {
   display: grid;
-  gap: 1.25rem;
+  gap: 16px;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
@@ -86,10 +85,10 @@
   background: #ffffff;
   border: 1px solid #ebf1ff;
   border-radius: 24px;
-  padding: 2rem;
+  padding: 24px 36px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -99,17 +98,18 @@
 }
 
 .cardTitle {
-  font-size: 1.125rem;
+  font-size: 24px;
+  max-width: 260px;
   font-weight: 600;
-  color: #111827;
-  line-height: 1.25;
+  color: #000;
+  line-height: 30px;
   margin: 0;
 }
 
 .cardIcon {
   min-height: 160px;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 
