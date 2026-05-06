@@ -1,0 +1,274 @@
+.section {
+  padding: 96px 24px 120px;
+  background: #fff;
+}
+
+.inner {
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.title {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: #232323;
+  margin: 0;
+}
+
+.title span {
+  color: #2DBB34;
+}
+
+.subtitle {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #5B6775;
+  max-width: 780px;
+  margin: 0;
+}
+
+.empowermentGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 23px;
+  width: min(1616px, 100%);
+  margin: 0 auto 64px;
+  justify-items: center;
+}
+
+.empowermentCard {
+  background: #FFFFFF;
+  border: 1px solid #E5EBF0;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.empowermentIcon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+}
+
+.empowermentTitle {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #232323;
+  margin: 0;
+}
+
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.socialTitle {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 34px;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #232323;
+  margin: 0;
+}
+
+.socialCopy {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #555E68;
+  margin: 0;
+}
+
+.badgeList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 88px;
+  margin: 0 auto;
+}
+
+.badgeCard {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.badgeImage {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.badgeName {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -1%;
+  text-align: center;
+  color: #232323;
+  margin: 0;
+}
+
+.badgeDescription {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #5B6775;
+  margin: 0;
+}
+
+.bothHeading {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 50px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #232323;
+  margin: 0 auto 28px;
+}
+
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 1540px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.benefitCard {
+  width: 300px;
+  background: #FFFFFF;
+  border: 1px solid #E5EBF0;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-4px);
+}
+
+.rotateNeg2 {
+  transform: rotate(-2deg);
+}
+
+.rotateNeg6 {
+  transform: rotate(-6deg);
+}
+
+.rotateZero {
+  transform: rotate(0deg);
+}
+
+.rotate6 {
+  transform: rotate(6deg);
+}
+
+.rotate2 {
+  transform: rotate(2deg);
+}
+
+.benefitIcon {
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+}
+
+.benefitText {
+  font-size: 24px;
+  line-height: 36px;
+  color: #111827;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 1140px) {
+  .empowermentGrid,
+  .badgeList,
+  .benefitGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .badgeList {
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .section {
+    padding: 72px 16px 96px;
+  }
+
+  .empowermentGrid,
+  .badgeList,
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitCard {
+    align-items: center;
+    text-align: center;
+  }
+
+  .benefitText {
+    width: 100%;
+  }
+}
