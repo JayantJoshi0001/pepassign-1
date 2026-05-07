@@ -97,6 +97,7 @@ export default function Footer() {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [selectedRegion] = useState("India");
   const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -134,6 +135,13 @@ export default function Footer() {
     setSelectedLanguage(language);
     setToast({ message: `Site content switched to ${language}`, type: "success" });
     setTimeout(() => setToast(null), 2500);
+  };
+
+  const toggleSection = (sectionTitle: string) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [sectionTitle]: !prev[sectionTitle],
+    }));
   };
 
   return (
@@ -181,17 +189,27 @@ export default function Footer() {
 
           <div className={styles.footerLinksGrid}>
             {footerColumns.map((section) => (
-              <div key={section.title} className={styles.footerLinksSection}>
-                <h4 className={styles.footerLinksTitle}>{section.title}</h4>
-                <ul className={styles.footerLinkList}>
-                  {section.links.map((link) => (
-                    <li key={link.name}>
-                      <Link href={link.href} className={styles.footerLink}>
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+              <div key={section.title} className={`${styles.footerLinksSection} ${expandedSections[section.title] ? styles.expanded : ""}`}>
+                <button
+                  type="button"
+                  className={styles.footerLinksSectionButton}
+                  onClick={() => toggleSection(section.title)}
+                  aria-expanded={expandedSections[section.title]}
+                >
+                  <h4 className={styles.footerLinksTitle}>{section.title}</h4>
+                  <span className={styles.footerLinksToggleIcon}>+</span>
+                </button>
+                {expandedSections[section.title] && (
+                  <ul className={styles.footerLinkList}>
+                    {section.links.map((link) => (
+                      <li key={link.name}>
+                        <Link href={link.href} className={styles.footerLink}>
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

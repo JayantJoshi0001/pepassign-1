@@ -272,3 +272,209 @@
     width: 100%;
   }
 }
+
+@media (max-width: 375px) {
+  .section {
+    padding: 32px 16px 48px;
+  }
+
+  .inner {
+    max-width: 100%;
+  }
+
+  .header {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .empowermentGrid {
+    width: 343px;
+    max-width: 100%;
+    height: 312px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 0 auto 32px;
+    justify-items: stretch;
+  }
+
+  .empowermentCard {
+    width: 164px;
+    height: 152px;
+    gap: 16px;
+    padding: 16px 12px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #E5EBF0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .empowermentIcon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+  }
+
+  .empowermentTitle {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #232323;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    max-width: 100%;
+  }
+
+  .socialSection {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .socialTitle {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .socialCopy {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    max-width: 100%;
+  }
+
+  .badgeList {
+    max-width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+
+  .badgeCard {
+    max-width: 100%;
+    gap: 12px;
+    padding: 12px 8px 16px;
+  }
+
+  .rotate2{
+    transform: rotate(0deg);
+  }
+
+  .rotate6 {
+    transform: rotate(0deg);
+  }
+
+  .rotateNeg2 {
+    transform: rotate(0deg);
+  }
+
+  .rotateNeg6 {
+    transform: rotate(0deg);
+  }
+
+  .rotateZero {
+    transform: rotate(0deg);
+  }
+
+  .badgeImage {
+    width: 64px;
+    height: 64px;
+  }
+
+  .badgeName {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -1%;
+    text-align: center;
+    color: #232323;
+    margin: 0;
+  }
+
+  .badgeDescription {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .bothHeading {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .benefitGrid {
+    width: 343px;
+    max-width: 100%;
+    height: 488px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0 auto;
+  }
+
+  .benefitCard {
+    width: 100%;
+    max-width: 343px;
+    padding: 16px 12px;
+    gap: 12px;
+  }
+
+  .benefitIcon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+  }
+
+  .benefitText {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+  }
+}

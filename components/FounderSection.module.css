@@ -102,3 +102,93 @@
 .disclaimerLink:hover {
   color: #dc2626;
 }
+
+@media (max-width: 375px) {
+  .founderSection {
+    padding: 32px 16px;
+  }
+
+  .founderInner {
+    padding: 0;
+  }
+
+  .founderQuote {
+    width: 343px;
+    max-width: 100%;
+    height: 92px;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 16px 12px;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    background: #ffffff;
+    border: 1px solid #E5EBF0;
+    margin: 0 auto 20px;
+  }
+
+  .founderPhoto {
+    width: 72px;
+    height: 72px;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin: 0 auto 16px;
+  }
+
+  .founderName {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    color: #111827;
+    margin: 0 0 4px 0;
+  }
+
+  .founderRole {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .founderDivider {
+    height: 1px;
+    background: #9c9c9c;
+    margin: 16px 0;
+  }
+
+  .disclaimerSection {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .disclaimerTitle {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #111827;
+    margin: 0 0 8px 0;
+  }
+
+  .disclaimerText {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #6E6E6E;
+    margin: 0;
+  }
+}

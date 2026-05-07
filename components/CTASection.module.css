@@ -92,3 +92,68 @@
   opacity: 0.7;
   cursor: not-allowed;
 }
+
+@media (max-width: 375px) {
+  .ctaSection {
+    padding: 32px 16px;
+  }
+
+  .ctaInner {
+    padding: 0;
+    gap: 16px;
+  }
+
+  .ctaTitle {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #232323;
+    margin: 0;
+  }
+
+  .ctaText {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ctaButtonGroup {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 343px;
+    height: 40px;
+    min-height: 40px;
+    gap: 8px;
+    padding: 4px 16px;
+    border-radius: 56px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .primary {
+    background: #232323;
+    color: #ffffff;
+  }
+
+  .secondary {
+    background: #D92C27;
+    color: #ffffff;
+  }
+}

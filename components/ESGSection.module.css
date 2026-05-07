@@ -120,8 +120,135 @@
 
 .cardDescription {
   margin-top: auto;
-  color: #4b5563;
+  color: #000;
   font-size: 0.95rem;
   line-height: 1.75;
   font-weight: 400;
+}
+
+@media (max-width: 375px) {
+  .section {
+    padding: 32px 16px 48px 16px;
+    background: #F7F7F7;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 7px;
+    gap: 32px;
+  }
+
+  .headingGroup {
+    gap: 8px;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  .title {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #232323;
+    margin: 0;
+  }
+
+  .copy {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    color: #555E68;
+    padding: 8px 12px;
+    border-radius: 6px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .highlightWrapper {
+    margin-top: 0;
+    gap: 12px;
+  }
+
+  .highlightHeader,
+  .subTitle {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .subCopy {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #6b7280;
+    margin: 0 auto;
+  }
+
+  .cardGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    gap: 10px;
+    border-radius: 8px;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid #ebf1ff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: none;
+    margin: 0 auto;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .cardTitle {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -1%;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .cardIcon {
+    min-height: 64px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cardIcon :global(img) {
+    max-height: 64px;
+    width: auto;
+  }
+
+  .cardDescription {
+    color: #000;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 450;
+    margin-top: auto;
+    text-align: left;
+  }
 }
