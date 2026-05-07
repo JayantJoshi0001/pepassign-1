@@ -148,6 +148,106 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1440px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .heroCopy {
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroLabel,
+  .heroTitle,
+  .heroText,
+  .heroTextSmall {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+  }
+
+  .heroTitle {
+    font-size: 52px;
+  }
+
+  .heroText {
+    font-size: 20px;
+  }
+
+  .heroCta {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .heroButton {
+    max-width: 343px;
+    min-height: 40px;
+    height: 40px;
+    padding: 4px 16px;
+    gap: 8px;
+    border-radius: 56px;
+    font-size: 14px;
+  }
+
+  .heroBackgroundText {
+    font-size: 220px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .heroCopy {
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroLabel,
+  .heroTitle,
+  .heroText,
+  .heroTextSmall {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+  }
+
+  .heroTitle {
+    font-size: 44px;
+  }
+
+  .heroText {
+    font-size: 20px;
+  }
+
+  .heroCta {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .heroButton {
+    max-width: 343px;
+    min-height: 40px;
+    height: 40px;
+    padding: 4px 16px;
+    gap: 8px;
+    border-radius: 56px;
+    font-size: 14px;
+  }
+
+  .heroBackgroundText {
+    font-size: 180px;
+  }
+}
+
 @media (max-width: 1024px) {
   .heroGrid {
     grid-template-columns: 1fr;
@@ -165,61 +265,292 @@
 
 @media (max-width: 768px) {
   .heroSection {
-    padding: 60px 0;
+    padding: 40px 0;
+  }
+
+  .heroGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .heroCopy {
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroLabel,
+  .heroTitle,
+  .heroText,
+  .heroTextSmall {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+  }
+
+  .heroLabel {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
   }
 
   .heroTitle {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -2%;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
-  .heroText {
-    font-size: 15px;
+  .heroText,
+  .heroTextSmall {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .heroCta {
-    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
 
   .heroButton {
-    padding: 12px 24px;
-    font-size: 13px;
+    width: 100%;
+    max-width: 343px;
+    min-height: 40px;
+    height: 40px;
+    padding: 4px 16px;
+    gap: 8px;
+    border-radius: 56px;
+    font-size: 14px;
+  }
+
+  .heroImageWrapper {
+    position: relative;
+    bottom: 0;
+    right: auto;
+    width: 100%;
+    max-width: 343px;
+    height: 196px;
+    margin: 0 auto;
+  }
+
+  .heroImageFrame {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .heroBackgroundText {
-    font-size: 80px;
+    font-size: 88px;
+    line-height: 100%;
+    letter-spacing: -4%;
     opacity: 0.5;
+    display: block;
   }
 }
 
 @media (max-width: 480px) {
   .heroSection {
-    padding: 40px 0;
+    padding: 24px 16px;
+  }
+
+  .heroGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .heroCopy {
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroLabel,
+  .heroTitle,
+  .heroText,
+  .heroTextSmall {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
   }
 
   .heroLabel {
-    font-size: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
   }
 
   .heroTitle {
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -2%;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
-  .heroText {
-    font-size: 14px;
-  }
-
+  .heroText,
   .heroTextSmall {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .heroCta {
+    justify-content: center;
+    width: 100%;
   }
 
   .heroButton {
     width: 100%;
-    justify-content: center;
-    padding: 12px 16px;
+    max-width: 343px;
+    min-height: 40px;
+    height: 40px;
+    padding: 4px 16px;
+    gap: 8px;
+    border-radius: 56px;
+    font-size: 14px;
+  }
+
+  .heroImageWrapper {
+    position: relative;
+    bottom: 0;
+    right: auto;
+    width: 100%;
+    max-width: 343px;
+    height: 196px;
+    margin: 0 auto;
+  }
+
+  .heroImageFrame {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .heroBackgroundText {
-    font-size: 60px;
-    display: none;
+    font-size: 88px;
+    color: #ffffff63;
+    line-height: 100%;
+    letter-spacing: -4%;
+    position: absolute;
+    right: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 375px) {
+  .heroSection {
+    padding: 40px 16px;
+  }
+
+  .heroGrid {
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .heroCopy {
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroLabel,
+  .heroTitle,
+  .heroText,
+  .heroTextSmall {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+  }
+
+  .heroLabel {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -2%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .heroText,
+  .heroTextSmall {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .heroCta {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .heroButton {
+    width: 343px;
+    min-height: 40px;
+    height: 40px;
+    padding: 4px 16px;
+    gap: 8px;
+    border-radius: 56px;
+    font-size: 14px;
+  }
+
+  .heroImageWrapper {
+    position: relative;
+    bottom: -50px;
+    right: 20px;
+    width: 343px;
+    height: 196px;
+    margin: 0 auto;
+  }
+
+  .heroImageFrame {
+    width: 343px;
+    height: 196px;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .heroBackgroundText {
+    font-size: 88px;
+    color: #ffffff90;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -4%;
+    position: absolute;
+    left: 15%;
+    display: block;
   }
 }
