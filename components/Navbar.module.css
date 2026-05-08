@@ -177,6 +177,12 @@
   font-weight: 600;
 }
 
+.crumbGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .iconSmall {
   width: 18px;
   height: 18px;

@@ -6,15 +6,38 @@ import { useState } from "react";
 import { Home, Menu, X } from "lucide-react";
 import styles from "./Navbar.module.css";
 
-export default function Navbar() {
+type NavbarLink = {
+  name: string;
+  href: string;
+  active?: boolean;
+};
+
+type Breadcrumb = {
+  label: string;
+  href?: string;
+};
+
+type NavbarProps = {
+  navLinks?: NavbarLink[];
+  breadcrumbs?: Breadcrumb[];
+  breadcrumbBg?: string;
+};
+
+const defaultNavLinks: NavbarLink[] = [
+  { name: "About Us", href: "/", active: true },
+  { name: "Services", href: "#", active: false },
+  { name: "Features", href: "#", active: false },
+  { name: "Career", href: "/careers", active: false },
+  { name: "Contact Us", href: "#", active: false },
+];
+
+const defaultBreadcrumbs: Breadcrumb[] = [
+  { label: "Company", href: "#" },
+  { label: "Partnership Program" },
+];
+
+export default function Navbar({ navLinks = defaultNavLinks, breadcrumbs = defaultBreadcrumbs, breadcrumbBg = "#E5F0E2" }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinks = [
-    { name: "About Us", href: "#", active: true },
-    { name: "Services", href: "#", active: false },
-    { name: "Features", href: "#", active: false },
-    { name: "Career", href: "#", active: false },
-    { name: "Contact Us", href: "#", active: false },
-  ];
 
   return (
     <header className={styles.siteHeader}>
@@ -77,15 +100,21 @@ export default function Navbar() {
         )}
       </nav>
 
-      <div className={styles.breadcrumbBar}>
+      <div className={styles.breadcrumbBar} style={{ background: breadcrumbBg }}>
         <div className={`container ${styles.breadcrumbInner}`}>
           <Home className={styles.iconSmall} />
-          <span className={styles.breadcrumbSeparator}>/</span>
-          <Link href="#" className={styles.breadcrumbLink}>
-            Company
-          </Link>
-          <span className={styles.breadcrumbSeparator}>/</span>
-          <span className={styles.breadcrumbLabel}>Partnership Program</span>
+          {breadcrumbs.map((crumb, index) => (
+            <div key={`${crumb.label}-${index}`} className={styles.crumbGroup}>
+              <span className={styles.breadcrumbSeparator}>/</span>
+              {crumb.href ? (
+                <Link href={crumb.href} className={styles.breadcrumbLink}>
+                  {crumb.label}
+                </Link>
+              ) : (
+                <span className={styles.breadcrumbLabel}>{crumb.label}</span>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </header>

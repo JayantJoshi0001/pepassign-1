@@ -1,0 +1,68 @@
+.section {
+  background: #ebebec;
+  padding: 0 0 42px;
+}
+
+.card {
+  background: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 44px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 1px dashed #e56e6a;
+  border-radius: 50%;
+  top: -108px;
+  right: -90px;
+  transform: rotate(25deg);
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  color: #2f2f2f;
+  font-size: clamp(30px, 2.8vw, 48px);
+  font-weight: 500;
+}
+
+.title span {
+  color: #d9352f;
+}
+
+.grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 28px;
+}
+
+.point {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.point svg {
+  margin-top: 2px;
+  color: #d9352f;
+}
+
+.point p {
+  margin: 0;
+  color: #505050;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

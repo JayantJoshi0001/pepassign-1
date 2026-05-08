@@ -1,0 +1,249 @@
+.section {
+  background: #F4F4F4;
+  padding: 44px 0 82px;
+}
+
+.inner {
+  max-width: 1440px;
+}
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  color: #2d2d2d;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -0.02em;
+  font-weight: 450;
+}
+
+.title span {
+  color: #d9352f;
+}
+
+.tabs {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 40px;
+  padding: 0 32px 14px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.tab {
+  border: 0;
+  background: transparent;
+  color: #454545;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 0 8px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.activeTab {
+  color: #d9352f;
+  border-bottom-color: #d9352f;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 336px minmax(0, 1049px);
+  gap: 32px;
+  justify-content: center;
+  align-items: start;
+}
+
+.sidebar {
+  color: #424242;
+  width: 336px;
+  min-height: 540px;
+}
+
+.searchWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 336px;
+  height: 64px;
+}
+
+.searchWrap input {
+  width: 100%;
+  height: 64px;
+  border: 1px solid #dadada;
+  background: #fff;
+  border-radius: 20px;
+  padding: 0 52px 0 32px;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  outline: none;
+}
+
+.searchWrap svg {
+  position: absolute;
+  right: 24px;
+  color: #9ca3af;
+}
+
+.roleList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  margin-top: 20px;
+  border-top: 1px solid #ececec;
+}
+
+.roleBtn {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  min-height: 58px;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 450;
+  color: #434343;
+  padding: 0 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #ececec;
+}
+
+.activeRole {
+  color: #d9352f;
+  border-left: 2px solid #d9352f;
+  padding-left: 14px;
+}
+
+.note {
+  color: #4d4d4d;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.jobCard {
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  padding: 32px;
+  width: 1049px;
+  min-height: 472px;
+}
+
+.jobCard h3 {
+  margin: 0;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2d2d2d;
+  font-weight: 500;
+}
+
+.metaGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ececec;
+}
+
+.metaLabel {
+  margin: 0;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #7a7a7a;
+  font-weight: 500;
+}
+
+.metaValue {
+  margin: 6px 0 0;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+  font-weight: 500;
+}
+
+.detailsBlock {
+  margin-top: 22px;
+}
+
+.jobDetails {
+  margin: 10px 0 28px;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+  font-weight: 500;
+}
+
+.emptyState {
+  margin: 0;
+  color: #6b7280;
+}
+
+.jobCard :global(.button) {
+  min-width: 116px;
+  height: 40px;
+  padding: 0 22px;
+  font-size: 14px;
+}
+
+@media (min-width: 1600px) {
+  .inner {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .section {
+    padding: 144px 240px;
+  }
+
+  .title {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .searchWrap,
+  .jobCard {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .jobCard {
+    min-width: 0;
+  }
+
+  .tabs {
+    gap: 16px;
+    padding: 0 0 12px;
+  }
+}

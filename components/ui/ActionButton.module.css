@@ -1,0 +1,64 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  border-radius: 99px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(216, 52, 47, 0.32);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.primary {
+  background: #d8342f;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(216, 52, 47, 0.24);
+}
+
+.primary:hover {
+  background: #bd2c28;
+}
+
+.ghost {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #dadde3;
+}
+
+.sm {
+  min-height: 34px;
+  padding: 0 15px;
+  font-size: 13px;
+}
+
+.md {
+  min-height: 40px;
+  padding: 0 18px;
+  font-size: 14px;
+}
+
+.hero {
+  height: 56px;
+  padding: 16px 32px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+}
+
+.lg {
+  min-height: 46px;
+  padding: 0 24px;
+  font-size: 15px;
+}
