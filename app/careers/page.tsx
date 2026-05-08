@@ -11,7 +11,7 @@ import GrowWithUsSection from "@/components/careers/GrowWithUsSection";
 import styles from "./page.module.css";
 
 const careerNavLinks = [
-  { name: "About Us", href: "#" },
+  { name: "About Us", href: "/" },
   { name: "Services", href: "#" },
   { name: "Features", href: "#" },
   { name: "Career", href: "/careers", active: true },

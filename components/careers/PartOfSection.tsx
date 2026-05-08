@@ -13,19 +13,24 @@ export default function PartOfSection() {
   return (
     <section className={styles.section}>
       <div className={`container ${styles.inner}`}>
-        <h2 className={styles.title}>What You&apos;ll <span>Be Part</span> of</h2>
+        <h2 className={styles.title}>What You&apos;ll <span className={styles.highlight}>Be Part</span> of</h2>
         <div className={styles.layout}>
           <div className={styles.left}>
-            <p>{cards[0]}</p>
-            <p>{cards[1]}</p>
-            <p>{cards[2]}</p>
+            {cards.slice(0, 3).map((card, idx) => (
+              <div key={idx} className={styles.card}>
+                <p>{card}</p>
+              </div>
+            ))}
           </div>
           <div className={styles.center}>
-            <Image src="/image 1.png" alt="Culture illustration" width={200} height={200} className={styles.image} />
+            <Image src="/careers/Layer_1.png" alt="Culture illustration" width={366} height={431} className={styles.image} />
           </div>
           <div className={styles.right}>
-            <p>{cards[3]}</p>
-            <p>{cards[4]}</p>
+            {cards.slice(3).map((card, idx) => (
+              <div key={idx} className={styles.card}>
+                <p>{card}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

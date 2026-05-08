@@ -1,78 +1,113 @@
 .section {
-  background: #ebebec;
-  padding: 8px 0 42px;
+  background: #f5f5f6;
+  padding: 40px;
 }
 
 .card {
-  background: #f7f7f7;
-  border: 1px solid #e3e3e3;
+  display: flex;
+  gap: 80px;
+  background: #ffffff;
   border-radius: 14px;
-  padding: 38px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 34px;
-  align-items: center;
+  padding: 140px 160px;
+  overflow: visible;
 }
 
-.photo {
-  width: 100%;
-  max-width: 340px;
-  aspect-ratio: 1 / 1;
+
+.leftImage {
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
-  border: 1px solid #e5e7eb;
-  background:
-    radial-gradient(circle at 30% 28%, #f2b8aa 0%, #cf4f3f 35%, transparent 36%),
-    radial-gradient(circle at 72% 70%, #fff6f3 0%, #f0d8d1 40%, transparent 41%),
-    linear-gradient(135deg, #f3f4f6, #dadde5);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
 }
 
 .title {
   margin: 0;
-  color: #2f2f2f;
-  font-size: clamp(30px, 2.8vw, 48px);
+  color: #1f1f1f;
+  font-family: "Neue Haas Grotesk Display Pro", "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -0.02em;
 }
 
-.title span {
+.accent {
   color: #d9352f;
 }
 
 .list {
-  margin-top: 18px;
-  display: grid;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .item {
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  gap: 20px;
+  align-items: center;
 }
 
-.item svg {
-  color: #d9352f;
-  margin-top: 3px;
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.item h3 {
+.iconImg {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemTitle {
   margin: 0;
-  font-size: 17px;
-  color: #2f2f2f;
+  font-family: "Neue Haas Grotesk Display Pro", "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  color: #111827;
 }
 
-.item p {
-  margin: 2px 0 0;
-  font-size: 12px;
+.itemText {
+  margin: 6px 0 0 0;
+  font-family: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
   color: #6b7280;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1440px) {
   .card {
-    grid-template-columns: 1fr;
+    padding: 40px 48px;
   }
-
-  .photo {
-    max-width: 260px;
+  .leftImage {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 340px;
+    height: 340px;
+    margin-bottom: 24px;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .title {
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
   }
 }

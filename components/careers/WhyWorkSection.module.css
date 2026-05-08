@@ -1,68 +1,111 @@
 .section {
-  background: #ebebec;
-  padding: 0 0 42px;
+  background: #f4f4f4;
+  padding: 80px;
+}
+
+.inner{
+    background: #f4f4f4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
 }
 
 .card {
-  background: #f7f7f7;
-  border: 1px solid #e6e6e6;
-  border-radius: 14px;
-  padding: 44px 36px;
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 144px 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
   position: relative;
   overflow: hidden;
 }
 
-.card::after {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border: 1px dashed #e56e6a;
-  border-radius: 50%;
-  top: -108px;
-  right: -90px;
-  transform: rotate(25deg);
-}
-
 .title {
-  margin: 0;
+  margin: 0 0 32px 0;
+  color: #1f1f1f;
   text-align: center;
-  color: #2f2f2f;
-  font-size: clamp(30px, 2.8vw, 48px);
-  font-weight: 500;
+  font-family: "Neue Haas Grotesk Display Pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 90px;
+  letter-spacing: -0.02em;
 }
 
-.title span {
+.brand {
   color: #d9352f;
 }
 
 .grid {
-  margin-top: 24px;
+  margin-top: 8px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px 28px;
+  grid-template-columns: 1fr 1fr;
+  gap: 84px 32px;
+  align-items: start;
 }
 
 .point {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   align-items: flex-start;
 }
 
-.point svg {
-  margin-top: 2px;
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
   color: #d9352f;
 }
 
-.point p {
-  margin: 0;
-  color: #505050;
-  font-size: 13px;
-  line-height: 1.6;
+.iconImg {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
 }
 
-@media (max-width: 860px) {
+.pointText {
+  margin: 0;
+  color: #505050;
+  font-family: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+}
+
+.bgImage {
+  position: absolute;
+  right: 0;
+  top: -100px;
+  width: 607px;
+  height: 557px;
+  transform: rotate(-12.14deg);
+  pointer-events: none;
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    padding: 48px 48px;
+  }
   .grid {
     grid-template-columns: 1fr;
+    gap: 20px 0;
+  }
+  .title {
+    font-size: 40px;
+    line-height: 52px;
   }
 }
