@@ -7,7 +7,7 @@ type ActionButtonProps = {
   href?: string;
   type?: "button" | "submit";
   variant?: "primary" | "ghost";
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "hero";
   className?: string;
   onClick?: () => void;
 };

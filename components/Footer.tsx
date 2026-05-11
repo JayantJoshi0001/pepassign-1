@@ -190,26 +190,25 @@ export default function Footer() {
           <div className={styles.footerLinksGrid}>
             {footerColumns.map((section) => (
               <div key={section.title} className={`${styles.footerLinksSection} ${expandedSections[section.title] ? styles.expanded : ""}`}>
+                <h4 className={styles.footerLinksTitle}>{section.title}</h4>
                 <button
                   type="button"
                   className={styles.footerLinksSectionButton}
                   onClick={() => toggleSection(section.title)}
                   aria-expanded={expandedSections[section.title]}
                 >
-                  <h4 className={styles.footerLinksTitle}>{section.title}</h4>
+                  <span className={styles.footerLinksMobileTitle}>{section.title}</span>
                   <span className={styles.footerLinksToggleIcon}>+</span>
                 </button>
-                {expandedSections[section.title] && (
-                  <ul className={styles.footerLinkList}>
-                    {section.links.map((link) => (
-                      <li key={link.name}>
-                        <Link href={link.href} className={styles.footerLink}>
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <ul className={styles.footerLinkList}>
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <Link href={link.href} className={styles.footerLink}>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

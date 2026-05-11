@@ -6,8 +6,6 @@ import WhyWorkSection from "@/components/careers/WhyWorkSection";
 import PartOfSection from "@/components/careers/PartOfSection";
 import ValuesSection from "@/components/careers/ValuesSection";
 import SolvingSection from "@/components/careers/SolvingSection";
-import FounderMessageSection from "@/components/careers/FounderMessageSection";
-import GrowWithUsSection from "@/components/careers/GrowWithUsSection";
 import styles from "./page.module.css";
 
 const careerNavLinks = [
@@ -35,8 +33,6 @@ export default function CareersPage() {
         <PartOfSection />
         <ValuesSection />
         <SolvingSection />
-        <FounderMessageSection />
-        <GrowWithUsSection />
       </main>
       <Footer />
     </div>

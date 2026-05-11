@@ -135,16 +135,88 @@
   font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+.noteBelowCard {
+  grid-column: 2;
+  margin-top: -8px;
+  width: 100%;
+  color: #4d4d4d;
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .jobCard {
-  background: #ffffff;
-  border: 1px solid #e3e3e3;
   border-radius: 20px;
   padding: 32px;
   width: 1049px;
   min-height: 472px;
+}
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem {
+  border-top: 1px solid #ececec;
+}
+
+.accordionItem:first-child {
+  border-top: 0;
+}
+
+.accordionTrigger {
+  width: 100%;
+  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 0;
+  background: transparent;
+  padding: 16px 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordionTitle {
+  font-family: 'Neue Haas Grotesk Display Pro', ui-sans-serif, system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 450;
+  color: #2d2d2d;
+}
+
+.accordionItemOpen .accordionTitle {
+  color: #d9352f;
+}
+
+.accordionIcon {
+  flex: 0 0 auto;
+  color: #2d2d2d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordionItemOpen .accordionIcon {
+  color: #2d2d2d;
+}
+
+.accordionPanel {
+  padding: 8px 0 20px;
+}
+
+.accordionPanelCard {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .jobCard h3 {
@@ -223,6 +295,7 @@
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .sidebar,
@@ -232,12 +305,223 @@
     min-height: auto;
   }
 
+  .roleList {
+    display: none;
+  }
+
+  .noteBelowCard {
+    grid-column: auto;
+    margin-top: 0;
+    text-align: center;
+  }
+
   .jobCard {
     min-width: 0;
+  }
+
+  .accordionTitle {
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .tabs {
     gap: 16px;
     padding: 0 0 12px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 375px) {
+  .section {
+    padding: 32px 0 40px;
+  }
+
+  .inner {
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .tabs {
+    gap: 24px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 0 6px;
+    scroll-snap-align: start;
+  }
+
+  .grid {
+    gap: 16px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .roleList {
+    display: none;
+  }
+
+  .noteBelowCard {
+    grid-column: auto;
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .searchWrap {
+    width: 343px;
+    max-width: 100%;
+    height: 48px;
+  }
+
+  .searchWrap input {
+    height: 48px;
+    border-radius: 8px;
+    padding: 8px 12px;
+    padding-right: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .searchWrap svg {
+    right: 12px;
+  }
+
+  .roleList {
+    margin-top: 16px;
+    display: none;
+  }
+
+  .roleBtn {
+    min-height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 12px;
+  }
+
+  .activeRole {
+    padding-left: 10px;
+  }
+
+  .jobCard {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .jobCard h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .accordionPanelCard {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .metaGrid {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  .metaLabel {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .metaValue {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 4px;
+  }
+
+  .detailsBlock {
+    margin-top: 16px;
+  }
+
+  .jobDetails {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 8px 0 20px;
+  }
+
+  .jobCard :global(.button) {
+    min-width: 97px;
+    height: 32px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .accordionTrigger {
+    padding: 14px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border: 0;
+    background: transparent;
+    padding: 16px 0;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .accordionPanel {
+    padding: 0 0 16px;
+  }
+
+  .accordionTitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .accordionPanelCard {
+    padding: 14px;
+  }
+
+  .note {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    display: none;
   }
 }

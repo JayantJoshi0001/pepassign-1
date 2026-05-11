@@ -1,6 +1,7 @@
 "use client";
 
-import { Search } from "lucide-react";
+import { Minus, Plus, Search } from "lucide-react";
+import { useState } from "react";
 import ActionButton from "@/components/ui/ActionButton";
 import { departmentTabs, roleFilters } from "@/data/careerData";
 import { useCareerOpenings } from "@/hooks/useCareerOpenings";
@@ -14,8 +15,19 @@ export default function OpeningsSection() {
     setActiveRole,
     searchQuery,
     setSearchQuery,
-    activeJob,
+    filteredJobs,
   } = useCareerOpenings();
+
+  const [expandedJobId, setExpandedJobId] = useState<string | null>(null);
+
+  const activeExpandedJobId =
+    expandedJobId && filteredJobs.some((job) => job.id === expandedJobId)
+      ? expandedJobId
+      : filteredJobs[0]?.id ?? null;
+
+  const toggleJob = (jobId: string) => {
+    setExpandedJobId((current) => (current === jobId ? null : jobId));
+  };
 
   return (
     <section id="openings" className={styles.section}>
@@ -67,29 +79,59 @@ export default function OpeningsSection() {
           </aside>
 
           <article className={styles.jobCard}>
-            {activeJob ? (
-              <>
-                <h3>{activeJob.title}</h3>
-                <div className={styles.metaGrid}>
-                  <div>
-                    <p className={styles.metaLabel}>Location</p>
-                    <p className={styles.metaValue}>{activeJob.location}</p>
-                  </div>
-                  <div>
-                    <p className={styles.metaLabel}>Experience</p>
-                    <p className={styles.metaValue}>{activeJob.experience}</p>
-                  </div>
-                </div>
-                <div className={styles.detailsBlock}>
-                  <p className={styles.metaLabel}>Job Details</p>
-                  <p className={styles.jobDetails}>{activeJob.details}</p>
-                </div>
-                <ActionButton label="View More" variant="ghost" size="sm" />
-              </>
+            {filteredJobs.length ? (
+              <div className={styles.accordionList}>
+                {filteredJobs.map((job) => {
+                  const isExpanded = activeExpandedJobId === job.id;
+
+                  return (
+                    <div key={job.id} className={`${styles.accordionItem} ${isExpanded ? styles.accordionItemOpen : ""}`}>
+                      <button
+                        type="button"
+                        className={styles.accordionTrigger}
+                        onClick={() => toggleJob(job.id)}
+                        aria-expanded={isExpanded}
+                      >
+                        <span className={styles.accordionTitle}>{job.title}</span>
+                        <span className={styles.accordionIcon} aria-hidden="true">
+                          {isExpanded ? <Minus size={24} /> : <Plus size={24} />}
+                        </span>
+                      </button>
+
+                      {isExpanded && (
+                        <div className={styles.accordionPanel}>
+                          <div className={styles.accordionPanelCard}>
+                            <h3>{job.title}</h3>
+                            <div className={styles.metaGrid}>
+                              <div>
+                                <p className={styles.metaLabel}>Location</p>
+                                <p className={styles.metaValue}>{job.location}</p>
+                              </div>
+                              <div>
+                                <p className={styles.metaLabel}>Experience</p>
+                                <p className={styles.metaValue}>{job.experience}</p>
+                              </div>
+                            </div>
+                            <div className={styles.detailsBlock}>
+                              <p className={styles.metaLabel}>Job Details</p>
+                              <p className={styles.jobDetails}>{job.details}</p>
+                            </div>
+                            <ActionButton label="View More" variant="ghost" size="sm" />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             ) : (
               <p className={styles.emptyState}>No openings match your current filters.</p>
             )}
           </article>
+
+          <p className={`${styles.noteBelowCard}`}>
+            Don&apos;t find what you&apos;re looking for? Reach out at careers@pepagora.com and tell us how you can contribute.
+          </p>
         </div>
       </div>
     </section>

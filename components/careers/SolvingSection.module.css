@@ -1,53 +1,696 @@
+/* Main Section */
 .section {
-  background: #ebebec;
-  padding: 6px 0 42px;
+  background: #f7f7f7;
+  padding: 80px 0;
+  width: 100%;
 }
 
-.title {
-  margin: 0;
+.solvingContainer {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+  margin-bottom: 100px;
+}
+
+.mainTitle {
+  font-family: "Neue Haas Grotesk Display Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 450;
+  font-size: 60px;
+  line-height: 90px;
+  letter-spacing: -2%;
   color: #2f2f2f;
-  font-size: clamp(30px, 2.8vw, 48px);
-  font-weight: 500;
+  margin: 0 0 12px 0;
+  text-align: left;
 }
 
-.title span {
+.mainTitle .highlight {
   color: #d9352f;
 }
 
-.subtext {
-  margin: 2px 0 0;
+.subtitle {
+  font-family: "Neue Haas Grotesk Display Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 450;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 2%;
   color: #8b8b8b;
-  font-size: 12px;
+  margin: 0 0 56px 0;
+  text-align: left;
 }
 
-.grid {
-  margin-top: 20px;
+/* Cards Grid */
+.cardsGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 56px;
 }
 
 .card {
-  background: #f8f8f8;
-  border: 1px solid #e3e3e3;
-  border-radius: 10px;
-  padding: 18px;
-  min-height: 126px;
+  border: 1px solid #3636361a;
+  border-radius: 20px;
+  padding: 32px;
+  background: #ffffff;
+  min-height: 272px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
 }
 
-.card svg {
+.card:hover {
+  border-color: #d9352f;
+  box-shadow: 0 8px 24px rgba(217, 53, 47, 0.1);
+}
+
+.cardIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+}
+
+.cardIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardText {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  color: #2f2f2f;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.founderContainer {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.founderBackgroundText {
+  position: absolute;
+  bottom: -100px;
+  left: 30%;
+  font-family: "Neue Haas Grotesk Display Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-size: 240px;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -8%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.founderTitle {
+  font-family: "Neue Haas Grotesk Display Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 90px;
+  letter-spacing: -2%;
+  color: #2f2f2f;
+  margin: 0 0 48px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.founderTitle .highlight {
   color: #d9352f;
 }
 
-.card p {
-  margin: 12px 0 0;
-  color: #4a4a4a;
-  font-size: 14px;
-  line-height: 1.5;
+.quoteWrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
 }
 
-@media (max-width: 900px) {
-  .grid {
+.quoteMark {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.quoteText {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  color: #2f2f2f;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.founderInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.founderSignatureWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.founderSignature {
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+.founderImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d9352f;
+}
+
+.founderDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.founderName {
+  font-family: "Neue Haas Grotesk Display Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #2f2f2f;
+  margin: 0;
+}
+
+.founderRole {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8b8b8b;
+  margin: 0;
+}
+
+
+.growContainer {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 144px 240px;
+  background: #f7f7f7;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.growContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.growTitle {
+  font-family: "Neue Haas Grotesk Display Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 450;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -2%;
+  color: #2f2f2f;
+  margin: 0;
+  text-align: left;
+}
+
+.growTitle .highlight {
+  color: #d9352f;
+  font-weight: 500;
+}
+
+.growDescription {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 155%;
+  letter-spacing: 1%;
+  color: #4a4a4a;
+  margin: 0;
+  text-align: left;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-family: "Neue Haas Grotesk Display Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 450;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -1%;
+  color: #000;
+  cursor: pointer;
+}
+
+.ctaDiv {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ctaButton img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.chevronIcon {
+  background: #d9352f;
+  border-radius: 50%;
+  padding: 4px;
+  color: #fff;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1440px) {
+  .solvingContainer,
+  .founderContainer,
+  .growContainer {
+    padding: 0 32px;
+  }
+
+  .founderBackgroundText {
+    font-size: 100px;
+    left: 32px;
+  }
+
+  .mainTitle,
+  .founderTitle,
+  .growTitle {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .cardsGrid {
+    gap: 24px;
+  }
+
+  .card {
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .cardText {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .growContainer {
+    gap: 60px;
+    padding: 48px 32px;
+  }
+
+  .ctaButton {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .solvingContainer,
+  .founderContainer {
+    margin-bottom: 60px;
+    padding: 0 24px;
+  }
+
+  .founderBackgroundText {
+    font-size: 80px;
+    left: 24px;
+  }
+
+  .growContainer {
+    margin-bottom: 60px;
     grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .mainTitle,
+  .founderTitle {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  .growTitle {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .quoteText {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .quoteMark {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+
+  .ctaButtons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ctaButton {
+    flex: 1;
+    min-width: 200px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .solvingContainer,
+  .founderContainer {
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .founderBackgroundText {
+    font-size: 60px;
+    left: 20px;
+    top: -30px;
+  }
+
+  .growContainer {
+    padding: 32px 20px;
+    border-radius: 16px;
+  }
+
+  .mainTitle,
+  .founderTitle {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .growTitle {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .cardText {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .quoteText {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .quoteMark {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+
+  .growDescription {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founderBackgroundText {
+    font-size: 48px;
+    left: 16px;
+    top: -20px;
+  }
+
+  .mainTitle,
+  .founderTitle,
+  .growTitle {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .cardText {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .cardIconWrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .quoteText {
+    font-size: 16px;
+  }
+
+  .quoteMark {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+
+  .growDescription {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .section {
+    padding: 32px 0;
+  }
+
+  .solvingContainer {
+    padding: 0 16px;
+    margin-bottom: 48px;
+  }
+
+  .mainTitle {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .subtitle {
+    margin: 0 0 24px 0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  .card {
+    width: 100%;
+    max-width: none;
+    min-height: 128px;
+    padding: 16px 12px;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .card:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 12px) / 2);
+  }
+
+  .cardIconWrapper {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .cardIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .growTitle {
+    text-align: center;
+  }
+
+  .growDescription {
+    text-align: center;
+  }
+
+  .growContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  }
+
+  .cardText {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .founderContainer {
+    padding: 0 16px;
+    margin-bottom: 48px;
+  }
+
+  .founderBackgroundText {
+    display: none;
+  }
+
+  .founderTitle {
+    margin: 0 0 24px 0;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .quoteWrapper {
+    max-width: 343px;
+    margin: 0 auto 32px;
+  }
+
+  .quoteMark {
+    width: 40px !important;
+    height: 40px !important;
+    margin-bottom: 16px;
+  }
+
+  .quoteText {
+    padding: 16px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .founderInfo {
+    gap: 12px;
+  }
+
+  .founderImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .founderSignatureWrapper {
+    margin-bottom: 8px;
+  }
+
+  .founderSignature {
+    width: 240px;
+  }
+
+  .founderName {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .founderRole {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
   }
 }

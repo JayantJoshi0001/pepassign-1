@@ -111,3 +111,93 @@
     text-align: center;
   }
 }
+
+@media (max-width: 375px) {
+  .section {
+    padding: 16px;
+  }
+
+  .card {
+    width: 343px;
+    max-width: 343px;
+    margin: 0 auto;
+    padding: 32px 12px;
+    border-radius: 12px;
+    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftImage {
+    width: 240px;
+    height: 240px;
+    flex: 0 0 auto;
+    margin: 0;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .leftImage img,
+  .leftImg {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .content {
+    width: 100%;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 450;
+  }
+
+  .list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+
+  .item {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .iconWrap {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+  }
+
+  .iconImg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .itemTitle {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 450;
+  }
+
+  .itemText {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 450;
+  }
+}

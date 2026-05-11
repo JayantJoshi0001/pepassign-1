@@ -11,10 +11,20 @@ export default function CareersHero() {
           <h1 className={styles.title}>
             We&apos;re not just hiring. <span>We&apos;re building a revolution</span> in how small businesses grow.
           </h1>
+          <div className={styles.mobileIllustrationCol}>
+            <Image
+              src="/careers/Child friendly area.png"
+              alt="Pepagora team illustration"
+              width={500}
+              height={532}
+              className={styles.mobileHeroImage}
+              priority
+            />
+          </div>
           <p className={styles.subtitle}>
             Come join a team that&apos;s rewriting the future of B2B with heart, tech, and grit.
           </p>
-          <ActionButton label="See Open Roles" href="#openings" size="hero" />
+          <ActionButton label="See Open Roles" href="#openings" size="md" className={styles.heroButton} />
         </div>
 
         <div className={styles.illustrationCol}>
