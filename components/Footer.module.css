@@ -150,9 +150,6 @@
 
   .footerLinksSectionButton {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .footerLinksMobileTitle {
@@ -200,7 +197,6 @@
 
 .footerLinksTitle {
   font-size: 12px;
-  display: flex;
   font-weight: 700;
   color: #111827;
   margin-bottom: 1rem;
@@ -294,6 +290,10 @@
   align-items: center;
   justify-content: center;
   color: #111827;
+}
+
+.footerLinksMobileTitle {
+  display: none;
 }
 
 .footerLanguageSection {
@@ -500,6 +500,10 @@
     min-height: auto;
   }
 
+  .footerLinksMobileTitle {
+    display: block;
+  }
+
   .footerPromoLabel {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -537,7 +541,6 @@
 
   .footerLinksSectionButton {
     display: flex;
-    flex-direction: row;
     border-bottom: 1px solid #e5e7eb;
     padding: 12px 0;
     font-size: 16px;
