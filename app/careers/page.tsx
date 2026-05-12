@@ -13,7 +13,7 @@ const careerNavLinks = [
   { name: "Services", href: "#" },
   { name: "Features", href: "#" },
   { name: "Career", href: "/careers", active: true },
-  { name: "Contact Us", href: "#" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 const breadcrumbs = [

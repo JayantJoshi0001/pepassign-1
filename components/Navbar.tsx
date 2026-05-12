@@ -21,6 +21,7 @@ type NavbarProps = {
   navLinks?: NavbarLink[];
   breadcrumbs?: Breadcrumb[];
   breadcrumbBg?: string;
+  showBreadcrumbs?: boolean;
 };
 
 const defaultNavLinks: NavbarLink[] = [
@@ -28,7 +29,7 @@ const defaultNavLinks: NavbarLink[] = [
   { name: "Services", href: "#", active: false },
   { name: "Features", href: "#", active: false },
   { name: "Career", href: "/careers", active: false },
-  { name: "Contact Us", href: "#", active: false },
+  { name: "Contact Us", href: "/contact", active: false },
 ];
 
 const defaultBreadcrumbs: Breadcrumb[] = [
@@ -36,7 +37,12 @@ const defaultBreadcrumbs: Breadcrumb[] = [
   { label: "Partnership Program" },
 ];
 
-export default function Navbar({ navLinks = defaultNavLinks, breadcrumbs = defaultBreadcrumbs, breadcrumbBg = "#E5F0E2" }: NavbarProps) {
+export default function Navbar({
+  navLinks = defaultNavLinks,
+  breadcrumbs = defaultBreadcrumbs,
+  breadcrumbBg = "#E5F0E2",
+  showBreadcrumbs = true,
+}: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -100,23 +106,25 @@ export default function Navbar({ navLinks = defaultNavLinks, breadcrumbs = defau
         )}
       </nav>
 
-      <div className={styles.breadcrumbBar} style={{ background: breadcrumbBg }}>
-        <div className={`container ${styles.breadcrumbInner}`}>
-          <Home className={styles.iconSmall} />
-          {breadcrumbs.map((crumb, index) => (
-            <div key={`${crumb.label}-${index}`} className={styles.crumbGroup}>
-              <span className={styles.breadcrumbSeparator}>/</span>
-              {crumb.href ? (
-                <Link href={crumb.href} className={styles.breadcrumbLink}>
-                  {crumb.label}
-                </Link>
-              ) : (
-                <span className={styles.breadcrumbLabel}>{crumb.label}</span>
-              )}
-            </div>
-          ))}
+      {showBreadcrumbs && (
+        <div className={styles.breadcrumbBar} style={{ background: breadcrumbBg }}>
+          <div className={`container ${styles.breadcrumbInner}`}>
+            <Home className={styles.iconSmall} />
+            {breadcrumbs.map((crumb, index) => (
+              <div key={`${crumb.label}-${index}`} className={styles.crumbGroup}>
+                <span className={styles.breadcrumbSeparator}>/</span>
+                {crumb.href ? (
+                  <Link href={crumb.href} className={styles.breadcrumbLink}>
+                    {crumb.label}
+                  </Link>
+                ) : (
+                  <span className={styles.breadcrumbLabel}>{crumb.label}</span>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }
