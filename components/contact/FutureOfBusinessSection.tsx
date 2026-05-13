@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./ContactPage.module.css";
+import { ChevronRight } from "lucide-react";
 
 const quickActions = [
   {
@@ -43,7 +44,7 @@ export default function FutureOfBusinessSection() {
                   </span>
                   <span>{action.label}</span>
                 </span>
-                <span className={styles.quickActionArrow}>›</span>
+                <ChevronRight className={styles.quickActionArrow} />
               </Link>
             ))}
           </div>

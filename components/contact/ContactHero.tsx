@@ -5,7 +5,7 @@ export default function ContactHero() {
   return (
     <section className={styles.hero}>
       <div className={styles.heroBackdrop} aria-hidden="true" />
-      <div className={styles.container}>
+      <div className={styles.heroContainer}>
         <p className={styles.eyebrow}>Contact Us</p>
         <h1 className={styles.heroTitle}>
           Whether you&apos;re here to <span>grow, partner,</span> <span>invest</span>, or just say hello, we&apos;d love to hear from you.

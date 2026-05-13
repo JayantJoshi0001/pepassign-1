@@ -7,7 +7,7 @@ export default function CareersPromotionSection() {
       <div className={styles.container}>
         <div className={styles.careersCard}>
           <span className={styles.careersWatermark}>careers</span>
-          <p className={styles.careersEyebrow}>We are always hiring builders, storytellers, and growth minds</p>
+          <span className={styles.careersEyebrow}>We are always hiring builders, storytellers, and growth minds</span>
           <h2 className={styles.careersTitle}>
             Want to be part of the <span>Pepagora</span> movement?
           </h2>
