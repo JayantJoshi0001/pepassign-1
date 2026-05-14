@@ -11,7 +11,7 @@ export default function PartnershipSection() {
             We welcome collaborations with trade bodies, tech platforms, logistic partners, and growth-focused organizations.
           </p>
           <img src="/contact/arrow.png" alt="Partnership illustration" className={styles.partnershipImage} />
-          <p className={styles.mailLine}>
+          <p className={styles.mailLine + " " + styles.partnermail}>
             mail us: <a href="mailto:partners@pepagora.com">partners@pepagora.com</a>
           </p>
         </div>

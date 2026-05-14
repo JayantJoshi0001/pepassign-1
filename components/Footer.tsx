@@ -7,76 +7,107 @@ import { Globe, ChevronDown } from "lucide-react";
 import { useEffect, useState, type FormEvent } from "react";
 import styles from "./Footer.module.css";
 
-const footerColumns = [
+type FooterLink = {
+  name: string;
+  href: string;
+  badge?: string;
+};
+
+type FooterSection = {
+  title: string;
+  links: FooterLink[];
+};
+
+type FooterColumn = {
+  sections: FooterSection[];
+};
+
+const footerColumns: FooterColumn[] = [
   {
-    title: "Company",
-    links: [
-      { name: "About Pepagora", href: "#" },
-      { name: "Innovation at Pepagora", href: "#" },
-      { name: "Sustainability at Pepagora", href: "#" },
-      { name: "Our Vision & Journey", href: "#" },
-      { name: "Governance & Leadership", href: "#" },
-      { name: "Media & Press", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Contact Us", href: "#" },
+    sections: [
+      {
+        title: "Company",
+        links: [
+          { name: "About Pepagora", href: "#" },
+          { name: "Innovation at Pepagora", href: "#" },
+          { name: "Sustainability at Pepagora", href: "#" },
+          { name: "Our Vision / Journey", href: "#" },
+          { name: "Governance & Leadership", href: "#" },
+          { name: "Media & Press", href: "#" },
+          { name: "Careers", href: "#" },
+          { name: "Contact Us", href: "#" },
+        ],
+      },
+      {
+        title: "Blog",
+        links: [
+          { name: "Sales", href: "#" },
+          { name: "Sourcing", href: "#" },
+          { name: "Marketing", href: "#" },
+          { name: "Product Updates", href: "#" },
+        ],
+      },
     ],
   },
   {
-    title: "Blog",
-    links: [
-      { name: "Sales", href: "#" },
-      { name: "Sourcing", href: "#" },
-      { name: "Marketing", href: "#" },
-      { name: "Product Updates", href: "#" },
+    sections: [
+      {
+        title: "Browse by Industries",
+        links: [
+          { name: "Apparel & Fashion", href: "#" },
+          { name: "Industrial Equipment & Machinery", href: "#" },
+          { name: "Home & Lifestyle", href: "#" },
+          { name: "Health & Personal Care", href: "#" },
+          { name: "Construction & Real Estate", href: "#" },
+          { name: "Electronics & Electrical", href: "#" },
+          { name: "Automotive & Transport", href: "#" },
+          { name: "Raw Materials & Chemicals", href: "#" },
+          { name: "Sports & Entertainment", href: "#" },
+          { name: "Tools & Hardware", href: "#" },
+          { name: "Packaging & Printing", href: "#" },
+          { name: "Office Supplies & Equipment", href: "#" },
+          { name: "Service & Support", href: "#" },
+        ],
+      },
     ],
   },
   {
-    title: "Browse by Industries",
-    links: [
-      { name: "Apparel & Fashion", href: "#" },
-      { name: "Industrial Equipment & Machinery", href: "#" },
-      { name: "Home & Lifestyle", href: "#" },
-      { name: "Health & Personal Care", href: "#" },
-      { name: "Construction & Real Estate", href: "#" },
-      { name: "Electronics & Electrical", href: "#" },
-      { name: "Automotive & Transport", href: "#" },
-      { name: "Raw Materials & Chemicals", href: "#" },
-      { name: "Sports & Entertainment", href: "#" },
-      { name: "Tools & Hardware", href: "#" },
-      { name: "Packaging & Printing", href: "#" },
-      { name: "Office Supplies & Equipment", href: "#" },
-      { name: "Service & Support", href: "#" },
+    sections: [
+      {
+        title: "Support & Legal",
+        links: [
+          { name: "Help Center", href: "#" },
+          { name: "FAQs", href: "#" },
+          { name: "Contact Support", href: "#" },
+          { name: "Privacy Policy", href: "#" },
+          { name: "Terms of Use", href: "#" },
+          { name: "Cookie Preferences", href: "#" },
+          { name: "Product Listing Policy", href: "#" },
+          { name: "Refund & Cancellation", href: "#" },
+          { name: "Data Protection Guidelines", href: "#" },
+          { name: "Sitemap", href: "#" },
+        ],
+      },
     ],
   },
   {
-    title: "Support & Legal",
-    links: [
-      { name: "Help Center", href: "#" },
-      { name: "FAQs", href: "#" },
-      { name: "Contact Support", href: "#" },
-      { name: "Privacy Policy", href: "#" },
-      { name: "Terms of Use", href: "#" },
-      { name: "Cookie Preferences", href: "#" },
-      { name: "Product Listing Policy", href: "#" },
-      { name: "Refund & Cancellation", href: "#" },
-      { name: "Data Protection Guidelines", href: "#" },
-      { name: "Sitemap", href: "#" },
-    ],
-  },
-  {
-    title: "Business Solutions",
-    links: [
-      { name: "Connect", href: "#" },
-      { name: "Sell", href: "#" },
-      { name: "Source", href: "#" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { name: "Pricing", href: "#" },
-      { name: "SME Stories", href: "#" },
-      { name: "Subscribe to our newsletter", href: "#" },
+    sections: [
+      {
+        title: "Business Solutions",
+        links: [
+          { name: "Connect", href: "#" },
+          { name: "Sell", href: "#" },
+          { name: "Source", href: "#" },
+        ],
+      },
+      {
+        title: "Resources",
+        links: [
+          { name: "Pricing", href: "#", badge: "Starting from 10$ per month" },
+          { name: "SME Stories", href: "#" },
+          { name: "Subscribe to our newsletter", href: "#" },
+        ],
+      },
     ],
   },
 ];
@@ -189,27 +220,35 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerLinksGrid}>
-            {footerColumns.map((section) => (
-              <div key={section.title} className={`${styles.footerLinksSection} ${expandedSections[section.title] ? styles.expanded : ""}`}>
-                <h4 className={styles.footerLinksTitle}>{section.title}</h4>
-                <button
-                  type="button"
-                  className={styles.footerLinksSectionButton}
-                  onClick={() => toggleSection(section.title)}
-                  aria-expanded={expandedSections[section.title]}
-                >
-                  <span className={styles.footerLinksMobileTitle}>{section.title}</span>
-                  <span className={styles.footerLinksToggleIcon}>+</span>
-                </button>
-                <ul className={styles.footerLinkList}>
-                  {section.links.map((link) => (
-                    <li key={link.name}>
-                      <Link href={link.href} className={styles.footerLink}>
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+            {footerColumns.map((column, columnIndex) => (
+              <div key={columnIndex} className={styles.footerLinksColumn}>
+                {column.sections.map((section) => (
+                  <div
+                    key={section.title}
+                    className={`${styles.footerLinksSection} ${expandedSections[section.title] ? styles.expanded : ""}`}
+                  >
+                    <h4 className={styles.footerLinksTitle}>{section.title}</h4>
+                    <button
+                      type="button"
+                      className={styles.footerLinksSectionButton}
+                      onClick={() => toggleSection(section.title)}
+                      aria-expanded={expandedSections[section.title]}
+                    >
+                      <span className={styles.footerLinksMobileTitle}>{section.title}</span>
+                      <span className={styles.footerLinksToggleIcon}>+</span>
+                    </button>
+                    <ul className={styles.footerLinkList}>
+                      {section.links.map((link) => (
+                        <li key={link.name} className={styles.footerLinkItem}>
+                          <Link href={link.href} className={styles.footerLink}>
+                            {link.name}
+                          </Link>
+                          {link.badge ? <span className={styles.footerLinkBadge}>{link.badge}</span> : null}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             ))}
           </div>

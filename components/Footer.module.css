@@ -11,20 +11,17 @@
 }
 
 .footerTopGrid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: minmax(260px, 360px) 1fr;
-  align-items: start;
-}
-
-@media (max-width: 1023px) {
-  .footerTopGrid {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  gap: 32px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footerBrandPanel {
   display: flex;
+  width: 100%;
+  max-width: 400px;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -134,9 +131,10 @@
 }
 
 .footerLinksGrid {
+  width:100%;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 32px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 @media (max-width: 1023px) {
@@ -179,6 +177,13 @@
 }
 
 .footerLinksSection {
+  min-width: 0;
+}
+
+.footerLinksColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   min-width: 0;
 }
 
@@ -231,6 +236,13 @@
   gap: 4px;
 }
 
+.footerLinkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 639px) {
   .footerLinksGrid {
     grid-template-columns: 1fr;
@@ -246,6 +258,17 @@
 
 .footerLink:hover {
   color: #111827;
+}
+
+.footerLinkBadge {
+  background: #dc2626;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .footerRule {

@@ -301,6 +301,13 @@
     letter-spacing: 0;
 }
 
+.partnermail{
+    margin: 0;
+    padding: 0;
+    border: none;
+    align-self: center;
+}
+
 .mailLine a,
 .supportEmail {
   color: #d92c27;
@@ -694,6 +701,13 @@
   .mailLine{
     font-size: 12px;
     line-height: 20px;
+  }
+
+  .partnermail{
+    margin: 0;
+    padding: 0;
+    border: none;
+    align-self: center;
   }
 
   .supportCard{
@@ -1091,6 +1105,13 @@
     letter-spacing: -0.01em;
     text-align: right;
     vertical-align: bottom;
+  }
+
+  .partnermail{
+    margin: 0;
+    padding: 0;
+    border: none;
+    align-self: center;
   }
 
   .mailLine a {
