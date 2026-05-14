@@ -203,7 +203,7 @@ export default function Footer() {
                   />
                 </div>
                 <p className={styles.footerPromoLabel}>List your Company</p>
-                <h3 className={styles.footerPromoTitle}>For Free</h3>
+                <h3 className={styles.footerPromoTitle + " " + styles.footerPromoTitlePrimary}>For Free</h3>
                 <Link href="#" className={`${styles.footerPromoButton} ${styles.footerPromoButtonRed}`}>
                   Join as Supplier
                 </Link>
@@ -310,13 +310,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={styles.footerCopy}>
+        <div className={styles.footerCopy + " " + styles.footerCopyWithRegion}>
           <button className={styles.footerRegionDropdown} type="button">
             <span className={styles.footerRegionIcon}><Globe size={16} /></span>
             <span className={styles.footerRegionLabel}>Serving in :</span>
             <span className={styles.footerRegionValue}>{selectedRegion}</span>
             <span className={styles.footerRegionArrow}><ChevronDown size={14} /></span>
           </button>
+          <small>Copyright &copy; {new Date().getFullYear()} Pepagora.com All rights reserved.</small>
         </div>
       </div>
 
